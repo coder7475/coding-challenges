@@ -1,6 +1,6 @@
 # Build Your Own wc Tool
 
-This is my implementation of the `wc` command line tool, based on the coding challenge from [codingchallenges.fyi](https://codingchallenges.fyi/challenges/intro).
+This is my implementation of the `wc` command line tool, based on the coding challenge from [codingchallenges.fyi](https://codingchallenges.fyi/challenges/challenge-wc).
 
 ## Description
 
