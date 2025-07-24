@@ -1,4 +1,4 @@
-#include "wc.cpp"
+#include "wc.hpp"
 #include <iostream>
 #include <string>
 using namespace std;
