@@ -1,10 +1,24 @@
 # Build Your Own wc Tool
 
-This is my implementation of the `wc` command line tool, based on the coding challenge from [codingchallenges.fyi](https://codingchallenges.fyi/challenges/challenge-wc).
+This is my implementation of the `wc` command line tool, based on the coding challenge from [challenge-wc](https://codingchallenges.fyi/challenges/challenge-wc).
 
 ## Description
 
 The goal of this project is to build a clone of the Unix command line tool `wc`. This tool is used to count words, lines, characters, and bytes in text files.
+
+## Usage
+
+Run the tool with the following syntax:
+
+```bash
+./ccwc [options] <file>
+```
+
+Options:
+
+- `-c` Display the character count
+- `-l` Display the line count
+- `-w` Display the word count
 
 ## Development Plan
 
@@ -21,4 +35,3 @@ The goal of this project is to build a clone of the Unix command line tool `wc`.
 ## License
 
 This project is created for learning purposes as part of the coding challenges from codingchallenges.fyi.
-
