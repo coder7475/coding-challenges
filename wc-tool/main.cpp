@@ -5,16 +5,32 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
   if (argc < 2) {
-    cerr << "Usage: " << argv[0] << "<filename>\n";
+    cerr << "Usage: ./ccwc [options] <file>\n";
+    cerr << "Options:\n  -l    Show line count\n  -w    Show word count\n  -c    Show character count\n";
+    return 1;
+}
+
+  string filePath, flag = "";
+
+  if (argc == 2) {
+    filePath = argv[1];
+  } else if (argc == 3) {
+    flag = argv[1];
+    filePath = argv[2];
+  } else {
+    cerr << "Too many arguments\n";
+    return 1;
   }
 
-  string filename = argv[1];
+  // read the file
+  WCResult result = countFromFile(filePath);
 
-  WCResult result = countFromFile(filename);
-
-  cout << "Lines: " << result.lines << "\n";
-  cout << "Words: " << result.words << "\n";
-  cout << "Characters: " << result.characters << "\n";
+  if (flag == "-l")
+    cout << result.lines << " " << filePath << "\n";
+  else if (flag == "-w")  
+    cout << result.words << " " << filePath << "\n";
+  else if (flag == "-c")
+    cout << result.characters << " " << filePath << "\n";
 
   return 0;
 }

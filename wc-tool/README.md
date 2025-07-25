@@ -20,6 +20,16 @@ Options:
 - `-l` Display the line count
 - `-w` Display the word count
 
+## Example
+
+• `./ccwc test.txt` - Show all counts
+
+• `./ccwc -l test.txt` - Show line count
+
+• `./ccwc -w test.txt` - Show word count
+
+• `./ccwc -c test.txt` - Show character count
+
 ## Development Plan
 
 1. Implement basic file reading functionality
