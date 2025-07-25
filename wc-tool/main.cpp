@@ -31,6 +31,12 @@ int main(int argc, char *argv[]) {
     cout << result.words << " " << filePath << "\n";
   else if (flag == "-c")
     cout << result.characters << " " << filePath << "\n";
-
+  else if (flag == "") 
+    cout << result.lines << " " << result.words << " " << result.characters << " " << filePath << "\n";
+  else {
+    cerr << "Unknown flag: " << flag << "\n";
+    return 1;
+  }
+    
   return 0;
 }
