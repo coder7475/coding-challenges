@@ -1,10 +1,14 @@
-# Build Your Own wc Tool
+# Build Your Own `wc` Tool
 
-This is my implementation of the `wc` command line tool, based on the coding challenge from [challenge-wc](https://codingchallenges.fyi/challenges/challenge-wc).
+This is a custom implementation of the Unix `wc` (word count) command-line utility, developed as part of the [challenge-wc](https://codingchallenges.fyi/challenges/challenge-wc) from codingchallenges.fyi.
 
 ## Description
 
-The goal of this project is to build a clone of the Unix command line tool `wc`. This tool is used to count words, lines, characters, and bytes in text files.
+The goal of this project is to recreate the functionality of the Unix `wc` tool. It reads a text file and provides counts for:
+
+- Lines
+- Words
+- Characters
 
 ## Usage
 
@@ -14,34 +18,43 @@ Run the tool with the following syntax:
 ./ccwc [options] <file>
 ```
 
-Options:
+### Options
 
-- `-c` Display the character count
-- `-l` Display the line count
-- `-w` Display the word count
+- `-c` Show the character count
+- `-l` Show the line count
+- `-w` Show the word count
 
-## Example
+If no options are provided, all counts will be displayed.
 
-• `./ccwc test.txt` - Show all counts
+## Examples
 
-• `./ccwc -l test.txt` - Show line count
+```bash
+./ccwc test.txt         # Show all counts
+./ccwc -l test.txt      # Show line count only
+./ccwc -w test.txt      # Show word count only
+./ccwc -c test.txt      # Show character count only
+```
 
-• `./ccwc -w test.txt` - Show word count
+## Build Instructions
 
-• `./ccwc -c test.txt` - Show character count
+Ensure you're in the project directory:
 
-## Development Plan
+```bash
+cd wc-tool
+```
 
-1. Implement basic file reading functionality
-2. Add line counting feature
-3. Add word counting feature
-4. Add character counting feature
-5. Add byte counting feature
-6. Handle multiple file inputs
-7. Add command line argument parsing
-8. Write tests
-9. Add error handling
+To build the executable:
+
+```bash
+make
+```
+
+To clean up build artifacts:
+
+```bash
+make clean
+```
 
 ## License
 
-This project is created for learning purposes as part of the coding challenges from codingchallenges.fyi.
+This project was created for educational purposes as part of the coding challenges from [codingchallenges.fyi](https://codingchallenges.fyi).
