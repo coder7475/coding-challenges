@@ -9,6 +9,7 @@ The goal of this project is to recreate the functionality of the Unix `wc` tool.
 - Lines
 - Words
 - Characters
+- Bytes
 
 ## Usage
 
@@ -32,7 +33,8 @@ If no options are provided, all counts will be displayed.
 ./ccwc test.txt         # Show all counts
 ./ccwc -l test.txt      # Show line count only
 ./ccwc -w test.txt      # Show word count only
-./ccwc -c test.txt      # Show character count only
+./ccwc -c test.txt      # Show bytes count only
+./ccwc -m test.txt      # Show characters count only
 ```
 
 ## Build Instructions
@@ -48,6 +50,8 @@ To build the executable:
 ```bash
 make
 ```
+
+Note: C++17 needed
 
 To clean up build artifacts:
 

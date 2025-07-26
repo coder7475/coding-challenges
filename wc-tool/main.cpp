@@ -30,6 +30,8 @@ int main(int argc, char *argv[]) {
   else if (flag == "-w")  
     cout << result.words << " " << filePath << "\n";
   else if (flag == "-c")
+    cout << result.bytes << " " << filePath << "\n";
+  else if (flag == "-m")
     cout << result.characters << " " << filePath << "\n";
   else if (flag == "") 
     cout << result.lines << " " << result.words << " " << result.characters << " " << filePath << "\n";
