@@ -7,6 +7,7 @@ struct WCResult {
   int lines = 0;
   int words = 0;
   int characters = 0;
+  int bytes = 0;
 };
 
 // Function signature of main logic of wc-tool
