@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
   else if (flag == "-m")
     cout << result.characters << " " << filePath << "\n";
   else if (flag == "") 
-    cout << result.lines << " " << result.words << " " << result.characters << " " << filePath << "\n";
+    cout << "  " << result.lines << "  " << result.words << " " << result.bytes << " " << filePath << "\n";
   else {
     cerr << "Unknown flag: " << flag << "\n";
     return 1;
