@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
 
 # Source files
-SRC = main.cpp wc.cpp
+SRC = src/main.cpp src/wc.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET = ccwc
 
