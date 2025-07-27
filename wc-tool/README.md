@@ -39,7 +39,8 @@ Run the tool with the following syntax:
 
 ### Options
 
-- `-c` Show the character count
+- `-m` Show the character count
+- `-c` Show number of bytes
 - `-l` Show the line count
 - `-w` Show the word count
 
