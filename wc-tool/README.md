@@ -4,12 +4,30 @@ This is a custom implementation of the Unix `wc` (word count) command-line utili
 
 ## Description
 
-The goal of this project is to recreate the functionality of the Unix `wc` tool. It reads a text file and provides counts for:
+The goal of this project is to recreate the functionality of the Unix `wc` tool. This implementation provides a faithful recreation of the original `wc` command's core functionality, allowing users to count:
 
-- Lines
-- Words
-- Characters
-- Bytes
+- Lines (`-l`): Counts newline characters in the input
+- Words (`-w`): Counts whitespace-separated sequences of characters
+- Characters (`-m`): Counts the number of characters in the input
+- Bytes (`-c`): Counts the number of bytes in the input
+
+## Requirements
+
+- C++17 compatible compiler (g++ or clang++)
+- GNU Make
+- Unix-like environment (Linux, macOS, WSL)
+
+## Project Structure
+
+```
+wc-tool/
+├── src/                    # Source files
+│   └── main.cpp            # Main implementation
+│   └── wc.cpp
+│   └── wc.hpp
+├── Makefile               # Build configuration
+├── README.md              # This file
+```
 
 ## Usage
 
@@ -35,6 +53,11 @@ If no options are provided, all counts will be displayed.
 ./ccwc -w test.txt      # Show word count only
 ./ccwc -c test.txt      # Show bytes count only
 ./ccwc -m test.txt      # Show characters count only
+cat test.txt | ./ccwc
+cat test.txt | ./ccwc -l
+cat test.txt | ./ccwc -w
+cat test.txt | ./ccwc -c
+cat test.txt | ./ccwc -m
 ```
 
 ## Build Instructions
@@ -62,3 +85,8 @@ make clean
 ## License
 
 This project was created for educational purposes as part of the coding challenges from [codingchallenges.fyi](https://codingchallenges.fyi).
+
+## Acknowledgments
+
+- Original Unix wc tool developers
+- [codingchallenges.fyi](https://codingchallenges.fyi) for the project inspiration
