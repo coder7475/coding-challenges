@@ -13,4 +13,7 @@ struct WCResult {
 // Function signature of main logic of wc-tool
 WCResult countFromFile(const std::string &filename);
 
+// Function signature to read from string
+WCResult countFromString(const std::string &content);
+
 #endif

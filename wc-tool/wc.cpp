@@ -9,21 +9,8 @@
 
 using namespace std;
 
-WCResult countFromFile(const string &filename) {
+WCResult countFromString(const std::string &content) {
   WCResult result;
-
-  // open file in binary mode
-  ifstream file(filename, ios::binary);
-
-  if (!file.is_open()) {
-    cerr << "Error: Could not open file" << filename << "\n";
-    return result;
-  }
-
-  // read file content is string
-  ostringstream oss;
-  oss << file.rdbuf();
-  string content = oss.str();
 
   result.bytes = content.size(); // count the bytes
   // count the lines
@@ -49,7 +36,26 @@ WCResult countFromFile(const string &filename) {
     result.characters = result.bytes;
   }
 
+  return result;
+}
+
+WCResult countFromFile(const string &filename) {
+  // open file in binary mode
+  ifstream file(filename, ios::binary);
+
+  if (!file.is_open()) {
+    cerr << "Error: Could not open file" << filename << "\n";
+    return WCResult{};
+  }
+
+  // read file content is string
+  ostringstream oss;
+  oss << file.rdbuf();
+  string content = oss.str();
+  // find output
+  WCResult output = countFromString(content);
+
   file.close();
 
-  return result;
+  return output;
 }
